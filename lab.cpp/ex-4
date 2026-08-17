@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+class SavingAccount {
+private:
+    string accountHolderName;
+int accountNumber;
+double balance;
+double interestRate;
+public:
+SavingAccount(string name, int accNumber, double initialBalance, double rate) {
+accountHolderName = name;
+accountNumber = accNumber
