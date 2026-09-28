@@ -1,17 +1,18 @@
 #include <iostream>
+using namespace std;
 #include <string>
 
 class Employee {
 private:
     int employeeID;
-    std::string employeeName;
+    string employeeName;
     double basicSalary;
     double hra; 
     double da;  
 
 public:
     
-    Employee(int id, std::string name, double basic, double h, double d) {
+    Employee(int id, string name, double basic, double h, double d) {
         employeeID = id;
         employeeName = name;
         basicSalary = basic;
@@ -26,24 +27,24 @@ public:
 
     
     void displayDetails() {
-        std::cout << "\n--- Employee Details ---" << std::endl;
-        std::cout << "Employee ID   : " << employeeID << std::endl;
-        std::cout << "Employee Name : " << employeeName << std::endl;
-        std::cout << "Basic Salary  : $" << basicSalary << std::endl;
-        std::cout << "HRA           : $" << hra << std::endl;
-        std::cout << "DA            : $" << da << std::endl;
-        std::cout << "Gross Salary  : $" << calculateGrossSalary() << std::endl;
+        cout << "\n Employee Details " << endl;
+        cout << "Employee ID   : " << employeeID << endl;
+        cout << "Employee Name : " << employeeName << endl;
+        cout << "Basic Salary  : $" << basicSalary << endl;
+        cout << "HRA           : $" << hra << endl;
+        cout << "DA            : $" << da << endl;
+        cout << "Gross Salary  : $" << calculateGrossSalary() << endl;
     }
 
     
     ~Employee() {
-        std::cout << "\nDestructor called: Object for Employee ID " << employeeID << " is destroyed." << std::endl;
+        cout << "\nDestructor called: Object for Employee ID " << employeeID << " is destroyed." << endl;
     }
 };
 
 int main() {
     
-    Employee emp(101, "John Doe", 50000.0, 7500.0, 4000.0);
+    Employee emp(1, "prem patil", 5000.0, 750.0, 40.0);
 
     
     emp.displayDetails();
